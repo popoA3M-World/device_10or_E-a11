@@ -222,6 +222,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_virtual_display_dimension=4096 \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     debug.sf.use_phase_offsets_as_durations=1 \
+    vendor.display.disable_rotator_downscale=1 \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.use_phase_offsets_as_durations=1 \
