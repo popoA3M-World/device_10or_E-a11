@@ -1049,7 +1049,7 @@
     <!-- These are actual sound device specific mixer settings -->
     <path name="adc1">
 <!-- +bug 196716,zhangjianming.wt,ADD,20160111,other can not reciving sound  -->
-        <ctl name="ADC1 Volume" value="6" />
+        <ctl name="ADC1 Volume" value="7" />
         <ctl name="DEC1 MUX" value="ADC1" />
 <!-- -bug 196716,zhangjianming.wt,ADD,20160111,other can not reciving sound  -->
         <ctl name="ADC1_INP1 Switch" value="1" />
@@ -1057,13 +1057,13 @@
 
     <path name="adc2">
 <!-- +bug 196716,zhangjianming.wt,ADD,20160111,other can not reciving sound  -->
-        <ctl name="ADC2 Volume" value="6" />
+        <ctl name="ADC2 Volume" value="7" />
 <!-- -bug 196716,zhangjianming.wt,ADD,20160111,other can not reciving sound  -->
         <ctl name="DEC1 MUX" value="ADC2" />
         <ctl name="MICBIAS CAPLESS Switch" value="1" />
     </path>
     <path name="adc3">
-        <ctl name="ADC3 Volume" value="6" />
+        <ctl name="ADC3 Volume" value="7" />
         <ctl name="DEC1 MUX" value="ADC2" />
         <ctl name="ADC2 MUX" value="INP3" />
         <ctl name="ADC1_INP1 Switch" value="1" />
@@ -1112,7 +1112,7 @@
     <path name="handset">
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="RDAC2 MUX" value="RX1" />
-        <ctl name="RX1 Digital Volume" value="94" />
+        <ctl name="RX1 Digital Volume" value="96" />
         <ctl name="EAR PA Gain" value="POS_6_DB" />
         <ctl name="EAR_S" value="Switch" />
     </path>
