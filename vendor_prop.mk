@@ -71,6 +71,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.ts.rtmakeup=true \
     media.camera.ts.monotonic=1
 
+# Charger
+PRODUCT_PROPERTY_OVERRIDES += \
+   ro.charger.enable_suspend=true
+
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1
