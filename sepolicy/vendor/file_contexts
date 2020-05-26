@@ -59,6 +59,10 @@
 # RTC
 /sys/devices/soc/qpnp-rtc-7/rtc/rtc0/hctosys            u:object_r:sysfs_rtc:s0
 
+# TimeKeep
+/sys/devices/soc\.0/qpnp-rtc-8/rtc/rtc0(/.*)?                        u:object_r:sysfs_rtc:s0
+/(system/vendor|vendor)/bin/timekeep                                 u:object_r:timekeep_exec:s0
+
 # Light
 /sys/devices(/platform)?/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?    u:object_r:sysfs_leds:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_land                           u:object_r:hal_light_default_exec:s0
