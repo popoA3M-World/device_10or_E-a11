@@ -1,2 +1,0 @@
-allow time_daemon self:capability { setuid setgid sys_time };
-allow time_daemon mnt_vendor_file:file r_file_perms;

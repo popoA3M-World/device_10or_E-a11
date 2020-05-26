@@ -182,10 +182,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.recovery_update=false
 
-# Time Services
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.delta_time.enable=true \
-
 # Usb
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.sys.usb.config.extra=none
