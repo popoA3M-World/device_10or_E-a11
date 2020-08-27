@@ -19,6 +19,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
     audio.offload.min.duration.secs=30 \
     audio.offload.video=true \
+    audio.deep_buffer.media=true \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicerec=false \
@@ -41,7 +42,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.safx.pbe.enabled=true \
     vendor.tunnel.audio.encode=false \
     ro.af.client_heap_size_kbyte=7168 \
-    vendor.voice.conc.fallbackpath=fast \
+    vendor.voice.conc.fallbackpath=deep-buffer \
     vendor.voice.path.for.pcm.voip=true
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
