@@ -68,6 +68,9 @@
 /sys/devices(/platform)?/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?    u:object_r:sysfs_leds:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_land                           u:object_r:hal_light_default_exec:s0
 
+# Root files
+/persist(/.*)?        u:object_r:mnt_vendor_file:s0
+
 # KCAL
 /sys/devices/platform/kcal_ctrl.0(/.*)?                                       u:object_r:sysfs_kcal:s0
 /sys/bus/platform/drivers/kcal_ctrl(/.*)?                                     u:object_r:sysfs_kcal:s0
