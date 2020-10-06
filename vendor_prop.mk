@@ -219,3 +219,8 @@ wifi.interface=wlan0
 # property to enable user to access Google WFD settings.
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.debug.wfd.enable=1
+
+#Blur
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.sf.blurs_are_expensive=1 \
+    ro.surface_flinger.supports_background_blur=1
