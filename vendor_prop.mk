@@ -131,6 +131,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sdm.debug.disable_skip_validate=1 \
     debug.sf.disable_backpressure=1 \
     sdm.perf_hint_window=50 \
+    vendor.gralloc.disable_ahardware_buffer=1 \
     ro.hardware.egl=adreno \
     ro.hardware.vulkan=adreno
 
