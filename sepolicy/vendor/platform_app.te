@@ -1,2 +1,4 @@
 allow platform_app qemu_hw_mainkeys_prop:file read;
 allow platform_app sysfs_fps:file { getattr open read };
+# Pocket mode
+allow platform_app default_android_service:service_manager find;
