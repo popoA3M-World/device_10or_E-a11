@@ -225,3 +225,8 @@ persist.debug.wfd.enable=1
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.sf.blurs_are_expensive=1 \
     ro.surface_flinger.supports_background_blur=1
+
+# Adreno
+PRODUCT_PRODUCT_PROPERTIES += \
+ro.hardware.vulkan=adreno \
+ro.hardware.egl=adreno
