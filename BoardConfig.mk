@@ -209,6 +209,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # SELinux
+SELINUX_IGNORE_NEVERALLOWS := true
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
