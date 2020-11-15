@@ -117,6 +117,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0
 
 # Bluetooth
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
+
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio@2.0-impl \
