@@ -56,6 +56,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.bluetooth.soc=smd \
     vendor.qcom.bluetooth.soc=smd
 
+# Boot
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.vendor.shutdown.waittime=500
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,com.snapchat.android \
