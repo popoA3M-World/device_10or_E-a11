@@ -566,12 +566,6 @@
     <!-- Wired/BT headset focus mode -->
     <bool name="config_deviceRingtoneFocusMode">true</bool>
 
-    <!-- Aspect ratio of screen -->
-    <item name="config_screenAspectRatio" format="float" type="dimen">1.7</item>
-	
-    <!-- Enable the RingtonePickerActivity in 'com.android.providers.media'. -->
-    <bool name="config_defaultRingtonePickerEnabled">true</bool>
-
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
