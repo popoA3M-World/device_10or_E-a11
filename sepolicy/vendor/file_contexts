@@ -40,10 +40,6 @@
 # FPS Info
 /sys/devices/virtual/graphics/fb0/measured_fps                              u:object_r:sysfs_fps:s0
 
-# TimeKeep
-/sys/devices/soc\.0/qpnp-rtc-8/rtc/rtc0(/.*)?                        u:object_r:sysfs_rtc:s0
-/(system/vendor|vendor)/bin/timekeep                                 u:object_r:timekeep_exec:s0
-
 # Perf
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@2\.1-service                                 u:object_r:hal_perf_default_exec:s0
 /vendor/lib(64)?/vendor\.qti\.hardware\.perf@2\.1\.so                                                   u:object_r:same_process_hal_file:s0

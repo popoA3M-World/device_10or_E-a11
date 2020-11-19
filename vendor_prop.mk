@@ -167,6 +167,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.fflag.override.settings_network_and_internet_v2=true \
     ro.telephony.use_old_mnc_mcc_format=true
 
+# Time Services
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.delta_time.enable=true \
+
 # Usb
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.sys.usb.config.extra=none
