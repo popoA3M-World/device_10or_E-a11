@@ -112,7 +112,6 @@ service vendor.ppd /system/vendor/bin/mm-pp-dpps
     user system
     socket pps stream 0660 system system
     group system graphics
-    socket pps stream 0660 system system
 
 on property:init.svc.hwcomposer-2-1=stopped
     stop vendor.ppd
@@ -136,18 +135,10 @@ on property:init.svc.surfaceflinger=restarting
     restart vendor.hwcomposer-2-1
 
 on charger
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
-    wait /dev/block/bootdevice/by-name/system
-    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
-    load_system_props
-    setprop sys.usb.configfs 1
-    start qcom-post-boot
     setprop persist.sys.usb.config mass_storage
     start vendor.hvdcp_opti
     start vendor.power_off_alarm
     start thermal-engine
-
 
 service adsprpcd /vendor/bin/adsprpcd
     class main
