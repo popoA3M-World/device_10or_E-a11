@@ -182,6 +182,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.recovery_update=false
 
+# Radio (IMS)
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.vendor.ims.disableIMSLogs=1 \
+persist.vendor.ims.disableADBLogs=1 \
+persist.vendor.ims.disableDebugDataPathLogs=1 \
+persist.vendor.ims.disableDebugLogs=1 \
+persist.vendor.ims.disableSigHandler=1 \
+persist.vendor.ims.disableQXDMLogs=1
+
 # Usb
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.sys.usb.config.extra=none
