@@ -753,15 +753,6 @@ function enable_memory_features()
     fi
 }
 
-function start_hbtp()
-{
-        # Start the Host based Touch processing but not in the power off mode.
-        bootmode=`getprop ro.bootmode`
-        if [ "charger" != $bootmode ]; then
-                start vendor.hbtp
-        fi
-}
-
 case "$target" in
     "msm7201a_ffa" | "msm7201a_surf" | "msm7627_ffa" | "msm7627_6x" | "msm7627a"  | "msm7627_surf" | \
     "qsd8250_surf" | "qsd8250_ffa" | "msm7630_surf" | "msm7630_1x" | "msm7630_fusion" | "qsd8650a_st1x")
@@ -1103,26 +1094,6 @@ case "$target" in
                 if [ -f /sys/devices/soc0/hw_platform ]; then
                     hw_platform=`cat /sys/devices/soc0/hw_platform`
                 fi
-                case "$soc_id" in
-                    "239")
-                    case "$hw_platform" in
-                        "Surf")
-                            case "$platform_subtype_id" in
-                                "1" | "2")
-                                    start_hbtp
-                                ;;
-                            esac
-                        ;;
-                        "MTP")
-                            case "$platform_subtype_id" in
-                                "3")
-                                    start_hbtp
-                                ;;
-                            esac
-                        ;;
-                    esac
-                    ;;
-                esac
             ;;
             "268" | "269" | "270" | "271")
                 echo 10 > /sys/class/net/rmnet0/queues/rx-0/rps_cpus
@@ -1951,28 +1922,6 @@ case "$target" in
         case "$soc_id" in
             "293" | "304" | "338" | "351")
 
-                # Start Host based Touch processing
-                case "$hw_platform" in
-                     "MTP" | "Surf" | "RCM" )
-                        #if this directory is present, it means that a
-                        #1200p panel is connected to the device.
-                        dir="/sys/bus/i2c/devices/3-0038"
-                        if [ ! -d "$dir" ]; then
-                              start_hbtp
-                        fi
-                        ;;
-                esac
-
-                if [ $soc_id -eq "338" ]; then
-                    case "$hw_platform" in
-                        "QRD" )
-                            if [ $platform_subtype_id -eq "1" ]; then
-                               start_hbtp
-                            fi
-                            ;;
-                    esac
-                fi
-
                 #init task load, restrict wakeups to preferred cluster
                 echo 15 > /proc/sys/kernel/sched_init_task_load
 
@@ -2109,13 +2058,6 @@ case "$target" in
         esac
         case "$soc_id" in
             "349" | "350")
-
-            # Start Host based Touch processing
-            case "$hw_platform" in
-                 "MTP" | "Surf" | "RCM" | "QRD" )
-                          start_hbtp
-                    ;;
-            esac
 
             for devfreq_gov in /sys/class/devfreq/qcom,mincpubw*/governor
             do
@@ -2295,20 +2237,6 @@ case "$target" in
         case "$soc_id" in
            "303" | "307" | "308" | "309" | "320" | "386" | "436")
 
-                  # Start Host based Touch processing
-                  case "$hw_platform" in
-                    "MTP" )
-			start_hbtp
-                        ;;
-                  esac
-
-                  case "$hw_platform" in
-                    "Surf" | "RCM" )
-			if [ $platform_subtype_id -ne "4" ]; then
-			    start_hbtp
-		        fi
-                        ;;
-                  esac
                 # Apply Scheduler and Governor settings for 8917 / 8920
 
                 echo 20000000 > /proc/sys/kernel/sched_ravg_window
@@ -2386,13 +2314,6 @@ case "$target" in
 
         case "$soc_id" in
              "294" | "295" | "313" )
-
-                  # Start Host based Touch processing
-                  case "$hw_platform" in
-                    "MTP" | "Surf" | "RCM" )
-                        start_hbtp
-                        ;;
-                  esac
 
                 # Apply Scheduler and Governor settings for 8937/8940
 
@@ -2480,13 +2401,6 @@ case "$target" in
 
         case "$soc_id" in
              "354" | "364" | "353" | "363" )
-
-                # Start Host based Touch processing
-                case "$hw_platform" in
-                    "MTP" | "Surf" | "RCM" | "QRD" )
-                    start_hbtp
-                ;;
-                esac
 
                 # Apply settings for sdm429/sda429/sdm439/sda439
 
@@ -2627,13 +2541,6 @@ case "$target" in
 
         case "$soc_id" in
              "386" | "436")
-
-                # Start Host based Touch processing
-                case "$hw_platform" in
-                    "QRD" )
-                    start_hbtp
-                ;;
-                esac
 	    ;;
 	esac
     ;;
@@ -2714,24 +2621,11 @@ case "$target" in
             # Start cdsprpcd only for sdm660 and disable for sdm630
             start vendor.cdsprpcd
 
-            # Start Host based Touch processing
-                case "$hw_platform" in
-                        "MTP" | "Surf" | "RCM" | "QRD" )
-                        start_hbtp
-                        ;;
-                esac
             ;;
         esac
         #Apply settings for sdm630 and Tahaa
         case "$soc_id" in
             "318" | "327" | "385" )
-
-            # Start Host based Touch processing
-            case "$hw_platform" in
-                "MTP" | "Surf" | "RCM" | "QRD" )
-                start_hbtp
-                ;;
-            esac
 
             # Setting b.L scheduler parameters
             echo 85 > /proc/sys/kernel/sched_upmigrate
@@ -2911,13 +2805,6 @@ case "$target" in
 
         case "$soc_id" in
             "336" | "337" | "347" | "360" | "393" )
-
-            # Start Host based Touch processing
-            case "$hw_platform" in
-              "MTP" | "Surf" | "RCM" | "QRD" )
-                  start_hbtp
-                  ;;
-            esac
 
       # Core control parameters on silver
       echo 0 0 0 0 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
@@ -4222,18 +4109,6 @@ case "$target" in
         case "$soc_id" in
             "347" )
 
-            # Start Host based Touch processing
-            case "$hw_platform" in
-              "Surf" | "RCM" | "QRD" )
-                  start_hbtp
-                  ;;
-              "MTP" )
-                  if [ $platform_subtype_id != 5 ]; then
-                      start_hbtp
-                  fi
-                  ;;
-            esac
-
       # Core control parameters on silver
       echo 0 0 0 0 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
       echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
@@ -4735,25 +4610,6 @@ case "$target" in
                 platform_subtype_id=`cat /sys/devices/soc0/platform_subtype_id`
         fi
 
-        case "$soc_id" in
-                "321" | "341")
-                # Start Host based Touch processing
-                case "$hw_platform" in
-                    "QRD" )
-                            case "$platform_subtype_id" in
-                                   "32") #QVR845 do nothing
-                                     ;;
-                                   *)
-                                         start_hbtp
-                                     ;;
-                            esac
-                     ;;
-                    *)
-                          start_hbtp
-                     ;;
-                esac
-         ;;
-        esac
 	# Core control parameters
 	echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
 	echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
@@ -5048,22 +4904,6 @@ case "$target" in
         platform_subtype_id=`cat /sys/devices/soc0/platform_subtype_id`
     fi
 
-    case "$hw_platform" in
-        "MTP" | "Surf" | "RCM" )
-            # Start Host based Touch processing
-            case "$platform_subtype_id" in
-                "0" | "1" | "2" | "3" | "4" | "5")
-                    start_hbtp
-                    ;;
-            esac
-        ;;
-        "HDK" )
-            if [ -d /sys/kernel/hbtpsensor ] ; then
-                start_hbtp
-            fi
-        ;;
-    esac
-
     echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
     configure_memory_parameters
     target_type=`getprop ro.hardware.type`
@@ -5252,22 +5092,6 @@ case "$target" in
     if [ -f /sys/devices/soc0/platform_subtype_id ]; then
         platform_subtype_id=`cat /sys/devices/soc0/platform_subtype_id`
     fi
-
-    case "$hw_platform" in
-        "MTP" | "Surf" | "RCM" )
-            # Start Host based Touch processing
-            case "$platform_subtype_id" in
-                "0" | "1")
-                    start_hbtp
-                    ;;
-            esac
-        ;;
-        "HDK" )
-            if [ -d /sys/kernel/hbtpsensor ] ; then
-                start_hbtp
-            fi
-        ;;
-    esac
 
 	#Setting the min and max supported frequencies
 	reg_val=`cat /sys/devices/platform/soc/780130.qfprom/qfprom0/nvmem | od -An -t d4`
@@ -5629,27 +5453,6 @@ case "$target" in
 	if [ -f /sys/devices/soc0/platform_subtype_id ]; then
 		platform_subtype_id=`cat /sys/devices/soc0/platform_subtype_id`
 	fi
-
-	case "$soc_id" in
-		"292") #msm8998 apq8098_latv
-		# Start Host based Touch processing
-		case "$hw_platform" in
-		"QRD")
-			case "$platform_subtype_id" in
-				"0")
-					start_hbtp
-					;;
-				"16")
-					if [ $platform_major_version -lt 6 ]; then
-						start_hbtp
-					fi
-					;;
-			esac
-
-			;;
-		esac
-	    ;;
-	esac
 
 	echo N > /sys/module/lpm_levels/system/pwr/cpu0/ret/idle_enabled
 	echo N > /sys/module/lpm_levels/system/pwr/cpu1/ret/idle_enabled

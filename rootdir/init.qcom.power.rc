@@ -63,5 +63,3 @@ on property:sys.boot_completed=1
     trigger enable-low-power
     setprop sys.io.scheduler cfq
 
-on boot
-        chown system system /sys/kernel/hbtp/display_pwr
