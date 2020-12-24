@@ -11,4 +11,7 @@ persist.audio.dirac.        u:object_r:dirac_prop:s0
 vendor.thermal.config       u:object_r:vendor_thermal_prop:s0
 
 # TimeKeep
-persist.vendor.timeadjust          u:object_r:vendor_timekeep_prop:s0
+persist.vendor.timeadjust   u:object_r:vendor_timekeep_prop:s0
+
+# Camera
+persist.debug.sf.showfps    u:object_r:camera_dbg_prop:s0
