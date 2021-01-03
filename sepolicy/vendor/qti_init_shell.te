@@ -1,3 +1,5 @@
+dontaudit qti_init_shell self:capability dac_override;
+
 allow qti_init_shell hci_attach_dev:chr_file rw_file_perms;
 allow qti_init_shell proc:dir setattr;
 allow qti_init_shell sysfs:file write;
