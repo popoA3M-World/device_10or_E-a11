@@ -95,6 +95,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.dpm.feature=0
 
+# DRM
+PRODUCT_PROPERTY_OVERRIDES += \
+drm.service.enabled=true
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
