@@ -22,3 +22,5 @@ allow system_server sysfs_battery_supply:file rw_file_perms;
 
 # Pocket mode
 allow system_server default_android_service:service_manager { add find };
+
+get_prop(system_server, vendor_alarm_boot_prop)
