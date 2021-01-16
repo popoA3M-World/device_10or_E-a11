@@ -365,14 +365,6 @@ vendor/lib/libqti-perfd.so|98835705f8ac0409ab5d78b7a52710c3c8d3f327
 vendor/lib/libqti-perfd-client.so|4fec2515f09cf18704e2501da071c7a28d4a61c7
 vendor/lib/libqti-util.so|b90cf5d6dab54445906fd94447d6d624586865ed
 
-# Perf (IOP) - from LA.UM.9.6.2.r1-02500-89xx.0
-vendor/lib/libqti-iopd-client.so|7ce1fb3256642e8ce2303e66f8224fe52c64c62c
-vendor/lib/vendor.qti.hardware.iop@1.0.so|2903970f871c3b4f0357b369aacfb13b1a8f5de2
-vendor/lib/vendor.qti.hardware.iop@2.0.so|7859526e841a01666ed1bcbbaa393f765359bba7
-vendor/lib64/libqti-iopd-client.so|512e12a6a86eb2dc5ad73a590c996d0e67e2ec1a
-vendor/lib64/vendor.qti.hardware.iop@1.0.so|68b541490d75f1bedd6ebae09ce5e0d5bf563890
-vendor/lib64/vendor.qti.hardware.iop@2.0.so|9ebadf4f9ac445fa0a767d33d1fe1cd6d64d9190
-
 # Keystore - from LA.UM.8.6.r1-02600-89xx.0
 vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so|265cd4d0246f5e2e80916dd1c96262be28306b31
 
