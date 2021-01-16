@@ -100,7 +100,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8937 \
-    CameraGo
+    Snap
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.common@1.0 \
