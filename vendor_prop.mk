@@ -70,7 +70,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.isp.clock.optmz=0 \
     vendor.vidc.enc.narrow.searchrange=1 \
     vendor.camera.lowpower.record.enable=1 \
-    persist.vendor.qti.telephony.vt_cam_interface=1 \
     persist.camera.gyro.android=0 \
     persist.camera.HAL3.enabled=1 \
     persist.camera.is_type=1 \
@@ -163,20 +162,38 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mmp.enable.3g2=true \
     media.aac_51_output_enabled=true
 
+
+# Netmgrd
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.use_data_netmgrd=true \
+persist.data.netmgrd.qos.enable=true \
+persist.vendor.data.mode=concurrent
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-    persist.radio.multisim.config=dsds \
-    ro.telephony.default_network=9,1 \
-    ro.telephony.call_ring.multiple=false \
-    persist.vendor.radio.apm_sim_not_pwdn=1 \
-    persist.vendor.radio.custom_ecc=1 \
-    persist.vendor.radio.rat_on=combine \
-    persist.vendor.radio.sib16_support=1 \
-    persist.vendor.data.mode=concurrent \
-    persist.vendor.data.iwlan.enable=true \
-    persist.sys.fflag.override.settings_network_and_internet_v2=true \
-    ro.telephony.use_old_mnc_mcc_format=true
+DEVICE_PROVISIONED=1 \
+persist.dbg.volte_avail_ovr=1 \
+persist.dbg.vt_avail_ovr=1 \
+persist.dbg.wfc_avail_ovr=1 \
+persist.radio.multisim.config=dsds \
+persist.sys.fflag.override.settings_network_and_internet_v2=true \
+persist.vendor.radio.apm_sim_not_pwdn=1 \
+persist.vendor.radio.custom_ecc=1 \
+persist.vendor.radio.hw_mbn_update=0 \
+persist.vendor.radio.rat_on=combine \
+persist.vendor.radio.sib16_support=1 \
+ril.subscription.types=NV,RUIM \
+rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
+ro.telephony.call_ring.multiple=false \
+ro.telephony.default_network=22,22 \
+ro.telephony.use_old_mnc_mcc_format=true \
+service.qti.ims.enabled=1 \
+vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
+
+# Tcp
+PRODUCT_PROPERTY_OVERRIDES += \
+net.tcp.2g_init_rwnd=10
+
 
 # Recovery
 PRODUCT_PROPERTY_OVERRIDES += \
