@@ -61,7 +61,8 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libqcompostprocbundle \
     libqcomvisualizer \
-    libqcomvoiceprocessing
+    libqcomvoiceprocessing \
+    libnbaio
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
