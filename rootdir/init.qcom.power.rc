@@ -43,6 +43,10 @@ on boot
     # Set perfd properties
     setprop vendor.post_boot.parsed 1
 
+    # EAS
+    write /proc/sys/kernel/sched_upmigrate 95
+    write /proc/sys/kernel/sched_downmigrate 85
+
 on charger
     # Offline all cores other than CPU0
     write /sys/devices/system/cpu/cpu1/online 0
