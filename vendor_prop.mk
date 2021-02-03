@@ -56,10 +56,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.bluetooth.soc=smd \
     vendor.qcom.bluetooth.soc=smd
 
-#BPF
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.kernel.ebpf.supported=true
-
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,com.snapchat.android \
