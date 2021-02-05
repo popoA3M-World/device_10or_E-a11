@@ -481,7 +481,9 @@ vendor/lib/libdiag.so|80f46cb6f207fad2616c867af0251afd3312124e
 vendor/lib64/libdiag.so|8aa1e537ec52b857992eb05d37e03a7f6d5b7f3e
 
 # QMI (shared dependencies) - from LA.UM.9.6.2.r1-03300-89xx.0
+vendor/lib/libpdmapper.so|c424e372e5a80781e1a8912ec53574d359421963
 vendor/lib/libqmi_cci.so|afa543bc939d8804cd243ec6100a498fa4d47280
+vendor/lib64/libpdmapper.so|705d4c50040ccaace787224219a4bcc192d7745f
 vendor/lib64/libqmi_cci.so|ae7480a95ed75db4a94c8fa108253ebb3930aab7
 
 # Radio - from Tissot PKQ1.180917.001 V10.0.24.0.PDHMIXM
@@ -528,14 +530,14 @@ system_ext/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad99
 system_ext/etc/permissions/telephonyservice.xml|b7831598d3c19c6ce4ef431d1cc44d94c3c35a8d
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|4f0056403f56928b8c75a617ba582f17061f89ae
 system_ext/framework/qcrilhook.jar|11a7acf78f662b161f8f0085f280f9ce1f9a600b
-system_ext/framework/qti-telephony-common.jar|a6db1eb4bffb276de8433aa862b661d41374c5ad
+system_ext/framework/qti-telephony-common.jar|486256a6f003f695e2ad41a272d37f46f6e2691a
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|b9080932c932e1c81e5792bdf5b13e3db4d9586e
 vendor/bin/adpl|408374dc512fa75b88101a04d1fd47b20d2f2b51
 vendor/bin/ATFWD-daemon|9df174780860b1728c2bb407d52ad31c7c60a680
 vendor/bin/tftp_server|704823a4c9b881dfddefae604e10ed71f3a1c4b2
 vendor/etc/init/dataadpl.rc|cd4907d9bfd438fe5f5c86f5d6cec590ac0bac2a
 vendor/etc/init/dataqti.rc|6abfd1a850d782adbbb6f42c9d8ca870036b2ad1
-vendor/etc/init/netmgrd.rc|ff425b7abb4e77c8d1648c0a5c02b3ba6070305b
+vendor/etc/init/netmgrd.rc|3d8770715d15374c4c6a535e3f41ea640d193202
 vendor/etc/init/port-bridge.rc|e52d61a0de5e8a3b21bfbfca929e862422645377
 vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa3f
 vendor/etc/init/vendor.qti.tftp.rc|b27f188cbffba470a4510d50e46ff7c8446c22cb
