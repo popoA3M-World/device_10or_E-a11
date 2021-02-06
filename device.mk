@@ -133,7 +133,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
 PRODUCT_PACKAGES += \
-    libldacBT_dec
+    libldacBT_dec \
+    libldacBT_bco
 
 # CNE
 PRODUCT_PACKAGES += \
