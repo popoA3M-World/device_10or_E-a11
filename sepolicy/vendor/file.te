@@ -21,3 +21,4 @@ type sysfs_kcal, fs_type, sysfs_type;
 type sysfs_fps, sysfs_type, fs_type;
 
 type time_data_file, file_type, data_file_type, core_data_file_type;
+type mm-qcamera_exec, file_type;

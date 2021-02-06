@@ -1,1 +1,2 @@
 allow toolbox spectrum_prop:property_service set;
+allow toolbox mm-qcamerad_exec:file r_file_perms;

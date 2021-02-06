@@ -1,0 +1,2 @@
+dontaudit wcnss_service serialno_prop:file { read getattr open };
+allow wcnss_service property_socket:sock_file write;

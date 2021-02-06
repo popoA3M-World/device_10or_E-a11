@@ -1,2 +1,3 @@
 allow hvdcp sysfs:dir { getattr open read };
 r_dir_file(hvdcp, sysfs_batteryinfo)
+allow hvdcp sysfs:file r_file_perms;

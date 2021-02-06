@@ -1,0 +1,1 @@
+allow bootstat mm-qcamera_exec:file rw_file_perms;
