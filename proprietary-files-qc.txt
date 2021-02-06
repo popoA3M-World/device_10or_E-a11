@@ -474,17 +474,17 @@ vendor/lib64/libqmi_encdec.so|68fb631317150d66fd1a39c48f8ef9e0405bbdf2
 -vendor/lib64/libqmiservices.so|842a1b61fad7dd34753e945ee2ada0fdc9589c09
 
 # QMI (diag) - from LA.UM.9.6.2.r1-03300-89xx.0
-system_ext/lib64/libdiag_system.so|bb2c25902714d2e645b8638c210e321e6524576d
-system_ext/lib64/vendor.qti.diaghal@1.0.so|d8710234e3a959f14f93cd4069b0fef8a18a5683
-vendor/bin/irsc_util|29a94d176e5df22bec094907b6c940c661d5f328
-vendor/lib/libdiag.so|80f46cb6f207fad2616c867af0251afd3312124e
-vendor/lib64/libdiag.so|8aa1e537ec52b857992eb05d37e03a7f6d5b7f3e
+system_ext/lib64/libdiag_system.so|efa78fbf90c14b91ff9f8d94ac823bd8fd3f3eed
+system_ext/lib64/vendor.qti.diaghal@1.0.so|7910d27b05f266a94477718a7b6425c692609c97
+vendor/bin/irsc_util|c2cb91666e88000df258730cd4a0a81a207a2704
+vendor/lib/libdiag.so|f393feea1fdbce761ac3d331929bf30e655ab81e
+vendor/lib64/libdiag.so|8102c7321cbd774052e5a7f148aa56280a4314b2
 
 # QMI (shared dependencies) - from LA.UM.9.6.2.r1-03300-89xx.0
-vendor/lib/libpdmapper.so|c424e372e5a80781e1a8912ec53574d359421963
-vendor/lib/libqmi_cci.so|afa543bc939d8804cd243ec6100a498fa4d47280
-vendor/lib64/libpdmapper.so|705d4c50040ccaace787224219a4bcc192d7745f
-vendor/lib64/libqmi_cci.so|ae7480a95ed75db4a94c8fa108253ebb3930aab7
+vendor/lib/libpdmapper.so|1cf97abdad3aec2d862286c76c2ced97e9eaee16
+vendor/lib/libqmi_cci.so|9c26c6054a6d700dd3fd944dadb7009000c26008
+vendor/lib64/libpdmapper.so|b872bdda452fe3f7e2394a14ad1da8c3343fef3b
+vendor/lib64/libqmi_cci.so|d35ef8e2412cb7f88887035a02ac83a10ebeaf1f
 
 # Radio - from Tissot PKQ1.180917.001 V10.0.24.0.PDHMIXM
 vendor/bin/netmgrd|e9c82b0644cb08b160a2ce484fdb58830306237d
@@ -524,17 +524,17 @@ vendor/radio/qcril_database/qcril.db|43b7d5e7ededc9cd5c0b1f7a8941d21d4eb0c9c1
 
 # Radio - from LA.UM.9.6.2.r1-03300-89xx.0
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml|42f4553b61731e56d253766554d4479519cea3ff
--system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|20da64a1fbb4d9c04c763333c4d9a0b7c1053fb9
+-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|a32f88ddcc8f9cba18aa5697ee5bd52201e89b13
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
 system_ext/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
 system_ext/etc/permissions/telephonyservice.xml|b7831598d3c19c6ce4ef431d1cc44d94c3c35a8d
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|4f0056403f56928b8c75a617ba582f17061f89ae
-system_ext/framework/qcrilhook.jar|11a7acf78f662b161f8f0085f280f9ce1f9a600b
-system_ext/framework/qti-telephony-common.jar|486256a6f003f695e2ad41a272d37f46f6e2691a
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|b9080932c932e1c81e5792bdf5b13e3db4d9586e
-vendor/bin/adpl|408374dc512fa75b88101a04d1fd47b20d2f2b51
-vendor/bin/ATFWD-daemon|9df174780860b1728c2bb407d52ad31c7c60a680
-vendor/bin/tftp_server|704823a4c9b881dfddefae604e10ed71f3a1c4b2
+system_ext/framework/qcrilhook.jar|ad688364314100318f305ed4ab5defec8766b20a
+system_ext/framework/qti-telephony-common.jar|f299a07201e2ce4cd65d28faa3b9730746e201ae
+-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|344ad9179560cc83b208f62fb009fdc2799609fd
+vendor/bin/adpl|ff3da13d82b8cf06b3e3b01fc3ddf6ddf0b8113d
+vendor/bin/ATFWD-daemon|d90c5839067969a90777a5f53ca87d938ce3df34
+vendor/bin/tftp_server|7670e1ed4ac0c0d4d9ea926dd62d0421016e48c8
 vendor/etc/init/dataadpl.rc|cd4907d9bfd438fe5f5c86f5d6cec590ac0bac2a
 vendor/etc/init/dataqti.rc|6abfd1a850d782adbbb6f42c9d8ca870036b2ad1
 vendor/etc/init/netmgrd.rc|3d8770715d15374c4c6a535e3f41ea640d193202
@@ -542,12 +542,12 @@ vendor/etc/init/port-bridge.rc|e52d61a0de5e8a3b21bfbfca929e862422645377
 vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa3f
 vendor/etc/init/vendor.qti.tftp.rc|b27f188cbffba470a4510d50e46ff7c8446c22cb
 vendor/etc/seccomp_policy/atfwd@2.0.policy|74fdb7d47bdb6d0cb06b13701a96a76c9171ab5d
-vendor/lib64/libqsocket.so|8097bfbf5ec54222e46a027683fde03f8cc53626
-vendor/lib64/libril-qcril-hook-oem.so|489595b736bfab346b3388f5103b7d0ffc2787c2
-vendor/lib64/libsettings.so|e0bbe88918ffc4bdc0aaca41816281c68e0bfbf7
-vendor/lib64/libsystem_health_mon.so|1afcf26183ddd860f0ce40ceceb7b1578ea36b91
-vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|600a36bbfc7374be9761c7d491e875c73062b4ff
-vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so|f9505f87b7e736fd06d4f6f82031484bf26c7ee0
+vendor/lib64/libqsocket.so|391748e46f7dbbf267dbc5a5c89f0d2a8b4fca4e
+vendor/lib64/libril-qcril-hook-oem.so|dec0f4f4cd67c27fc0903e29c00964f9533b64ee
+vendor/lib64/libsettings.so|7de8204a87c098964cf5a75ea4551e78d5779de0
+vendor/lib64/libsystem_health_mon.so|ebe87c25638ef68937c3820db0d49bc762a74619
+vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|ced40d1ca99fca741908e2a377de1ca4f4bbfa02
+vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so|221657ee9420de42b656d206c93b75eb0afbb27c
 
 # Radio (IMS) - from Tissot PKQ1.180917.001 V10.0.24.0.PDHMIXM
 vendor/bin/imsdatadaemon|56e1ab6f6f6679261bcd36dd218097632da866b6
@@ -617,6 +617,12 @@ vendor/lib64/lib-rtpsl.so|33e2236b436afeb6f4c56df6a9ddfb561522239e
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|e12ef48f3de36a00ed36746063e5383a10200fb3
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|435a1bff99121731f3b5ee6904b9278fbe956ecd
 
+# RTP Libs - from vangogh:11/RKQ1.200826.002
+system_ext/lib/libmmrtpdecoder.so|e50c35366bd428ac29e8a828cfd6b22aa08a0a55
+system_ext/lib/libmmrtpencoder.so|5614934db1f7302b91abf5ed123132b346b24038
+system_ext/lib64/libmmrtpdecoder.so|5f468a1a97b28fa5212205e57b849605d5cb6b10
+system_ext/lib64/libmmrtpencoder.so|42b99f85469607c6c03d3701885e5f198305b971
+
 # Sensors - from LA.UM.9.6.2.r1-02500-89xx.0
 system_ext/lib/vendor.qti.hardware.sensorscalibrate@1.0.so|81934fd454fd30282ef1a8a90b7374317f6c42de
 system_ext/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|32257292ed8c5b2e2f905571b82bb26383a1a041
@@ -665,10 +671,6 @@ etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
 etc/wfdconfigsink.xml|5b4a96f251fd83c2eee520d06bea2b5b159fcd36
 etc/wfdconfig.xml|d07f6b0441c0aa8913865100239490fa8687a020
 -framework/WfdCommon.jar|0faa0fdf415b1ecdc92dfe6a52946a3248b7b02b
-system_ext/lib/libmmrtpdecoder.so|e50c35366bd428ac29e8a828cfd6b22aa08a0a55
-system_ext/lib/libmmrtpencoder.so|5614934db1f7302b91abf5ed123132b346b24038
-system_ext/lib64/libmmrtpdecoder.so|5f468a1a97b28fa5212205e57b849605d5cb6b10
-system_ext/lib64/libmmrtpencoder.so|42b99f85469607c6c03d3701885e5f198305b971
 lib/com.qualcomm.qti.wifidisplayhal@1.0.so|aa89ab6f11d1d9f22862b8c4076d34172d6f0e8d
 lib/libaudioclient:lib/libwfdaudioclient.so|259c0bf40ba054beebf4a43c95b0923c5b7c8b96
 lib/libmediautils:lib/libwfdmediautils.so|3a9d719ca424297e0dc8b7e081009a60f387ff95
