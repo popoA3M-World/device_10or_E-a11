@@ -135,6 +135,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat64.enabled=true
 
+# Network manager
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.vendor.data.iwlan.enable=true
+
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.dpm.feature=0
