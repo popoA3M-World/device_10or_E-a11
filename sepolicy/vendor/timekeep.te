@@ -30,3 +30,4 @@ allow timekeep vendor_data_file:dir { add_name write };
 allow timekeep vendor_data_file:file { open write create getattr };
 allow timekeep vendor_time_data_file:dir { search };
 allow timekeep vendor_time_data_file:dir rw_dir_perms;
+allow timekeep vendor_time_data_file:file { create };
