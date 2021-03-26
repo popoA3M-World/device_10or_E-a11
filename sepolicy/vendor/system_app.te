@@ -15,3 +15,6 @@ allow system_app sysfs_fps:file rw_file_perms;
 allow system_app fm_radio_device:chr_file r_file_perms;
 
 allow system_app sysfs_zram:dir { search };
+
+# Battery Health
+r_dir_file(system_app, sysfs_battery_supply);
