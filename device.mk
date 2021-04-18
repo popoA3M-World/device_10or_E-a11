@@ -423,6 +423,7 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     init.goodix.sh \
+    init.veth_ipa_config.sh \
     ueventd.qcom.rc \
     init.msm.usb.configfs.rc \
     init.spectrum.rc \
