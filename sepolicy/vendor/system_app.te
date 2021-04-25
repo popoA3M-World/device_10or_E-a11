@@ -1,7 +1,7 @@
 # Allow binder calls to fingerprintd
 binder_call(system_app, fingerprintd)
-allow system_app fm_prop:property_service set;
-get_prop(system_app, fm_prop)
+allow system_app vendor_fm_prop:property_service set;
+get_prop(system_app, vendor_fm_prop)
 allow system_app sysfs_kcal:file rw_file_perms;
 allow system_app sysfs_kcal:dir search;
 allow system_app sysfs_vibrator:file rw_file_perms;
