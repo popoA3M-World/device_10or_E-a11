@@ -43,10 +43,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.tunnel.audio.encode=false \
     ro.af.client_heap_size_kbyte=7168 \
     vendor.voice.conc.fallbackpath=deep-buffer \
-    vendor.voice.path.for.pcm.voip=true
+    vendor.voice.path.for.pcm.voip=true \
+    vendor.voice.voip.conc.disabled=true
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    use.voice.path.for.pcm.voip=false
+    use.voice.path.for.pcm.voip=true
+    voice.voip.conc.disabled=true
 
 # Audio dynamic feature flags
 PRODUCT_PROPERTY_OVERRIDES += \
