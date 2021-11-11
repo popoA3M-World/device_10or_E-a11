@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/land
+DEVICE_PATH := device/10or/E
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8937
@@ -160,11 +160,11 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
-TARGET_KERNEL_CONFIG := land_defconfig
+TARGET_KERNEL_CONFIG := holland1_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_VERSION := 4.9
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
+TARGET_KERNEL_SOURCE := kernel/10or/E
 
 # Malloc
 MALLOC_SVELTE_FOR_LIBC32 := true
@@ -234,8 +234,8 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2017-04-01
+VENDOR_SECURITY_PATCH := 2019-02-01
 
 # Inherit the common proprietary files
--include vendor/xiaomi/land/BoardConfigVendor.mk
+-include vendor/10or/E/BoardConfigVendor.mk
 

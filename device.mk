@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/xiaomi/land
+LOCAL_PATH := device/10or/E
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -510,7 +510,7 @@ PRODUCT_PACKAGES += \
     libnl
 
 # Inherit common proprietary files
-$(call inherit-product-if-exists, vendor/xiaomi/land/land-vendor.mk)
+$(call inherit-product-if-exists, vendor/10or/E/E-vendor.mk)
 
 # XiaomiParts
 PRODUCT_PACKAGES += \

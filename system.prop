@@ -1,5 +1,5 @@
 #
-# system.prop for land
+# system.prop for E
 #
 
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
