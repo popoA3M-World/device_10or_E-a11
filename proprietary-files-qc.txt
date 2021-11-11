@@ -460,7 +460,7 @@ vendor/lib/libdiag.so|246f7ef3af408e81d10af90d2da28275b8a12fe2
 vendor/lib64/libdiag.so|4dc2553e6ce8f7cc7d16adf8d013845b4ba198af
 
 # QMI (shared dependencies) - from LA.UM.9.6.2.r1-04200-89xx.0
-vendor/lib/libpdmapper.so|1cf97abdad3aec2d862286c76c2ced97e9eaee16
+vendor/lib/libpdmapper.so|8c6798e601369c948f3b22ac378609eb82861b51
 vendor/lib/libqcci_legacy.so|39e27fbf8b3ed8f668ea701ac58a5d0a39513bb8
 vendor/lib/libqmi_cci.so|a3a80e5bc768052761333ee31d749ba67a64618c
 vendor/lib/libqmi_client_helper.so|47cfa8436a28f894a1bfbe8c59f3a9cdfd708d2e
@@ -469,7 +469,7 @@ vendor/lib/libqmi_common_so.so|8a6ca528e355675a5117264ea92f7574570ff375
 vendor/lib/libqmi_csi.so|aede7e8511d6b9500b64445621e3a8756509e9b2
 vendor/lib/libqmi_encdec.so|ffcfbaeb676e332e63b61402bf711fa7208928a3
 vendor/lib/libqmi_legacy.so|de53cb3d62913a71b44fc2c30e6fbbf2f7ccade5
-vendor/lib64/libpdmapper.so|b872bdda452fe3f7e2394a14ad1da8c3343fef3b
+vendor/lib64/libpdmapper.so|e8181ae9c4389a4fc36d502906b5f074f81b2fbd
 vendor/lib64/libqcci_legacy.so|b24c65dd780018687d7bbce5a7707141b259f0e5
 vendor/lib64/libqmi_cci.so|d39870d60e0a2b1dfbaec62dc2f83279b464fa19
 vendor/lib64/libqmi_client_helper.so|22fbf5f142105b62296ced7e87518e0320af1616
