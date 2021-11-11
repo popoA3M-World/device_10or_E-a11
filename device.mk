@@ -466,7 +466,7 @@ PRODUCT_PACKAGES += \
 
 # Touch HAL
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.land
+    vendor.lineage.touch@1.0-service.E
 
 # USB
 PRODUCT_PACKAGES += \
