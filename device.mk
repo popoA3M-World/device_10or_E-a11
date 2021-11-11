@@ -260,7 +260,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_land
+    android.hardware.light@2.0-service.E
 
 # Libshim
 PRODUCT_PACKAGES += \

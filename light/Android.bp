@@ -15,10 +15,10 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.xiaomi_land",
+    name: "android.hardware.light@2.0-service.E",
     proprietary: true,
-    init_rc: ["android.hardware.light@2.0-service.xiaomi_land.rc"],
-    vintf_fragments: ["android.hardware.light@2.0-service.xiaomi_land.xml"],
+    init_rc: ["android.hardware.light@2.0-service.E.rc"],
+    vintf_fragments: ["android.hardware.light@2.0-service.E.xml"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
         "libhardware",
