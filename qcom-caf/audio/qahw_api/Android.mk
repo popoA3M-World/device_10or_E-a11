@@ -11,6 +11,9 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES   := $(libqahwapi-inc)
 LOCAL_C_INCLUDES += $(TARGET_OUT_HEADERS)/mm-audio/qahw/inc
 
+LOCAL_HEADER_LIBRARIES := \
+    libutils_headers \
+
 LOCAL_SRC_FILES := \
     src/qahw_api.cpp
 
@@ -25,16 +28,15 @@ LOCAL_SHARED_LIBRARIES := \
     libcutils \
     libhardware \
     libdl \
-    libutils \
     libqahwwrapper
 
 LOCAL_CFLAGS += -Wall -Werror
+
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
+
+LOCAL_PRELINK_MODULE    := false
 LOCAL_VENDOR_MODULE     := true
 
-ifneq ($(filter kona lahaina holi,$(TARGET_BOARD_PLATFORM)),)
-LOCAL_SANITIZE := integer_overflow
-endif
 include $(BUILD_SHARED_LIBRARY)
 
 #test app compilation
