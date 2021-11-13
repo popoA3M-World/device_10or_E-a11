@@ -82,6 +82,7 @@ vendor/lib/libmmcamera_hi553_qh.so
 vendor/lib/libmmcamera_hi553_qh_eeprom.so
 vendor/lib/libmmcamera_imglib.so
 vendor/lib/libmmcamera_imglib_faceproc_adspstub.so
+vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera_le2464c_eeprom.so
 vendor/lib/libmmcamera_le2464c_master_eeprom.so
 vendor/lib/libmmcamera_llvd.so
