@@ -4,6 +4,11 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Adreno
+PRODUCT_PRODUCT_PROPERTIES += \
+ro.hardware.vulkan=adreno \
+ro.hardware.egl=adreno
+
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
@@ -93,6 +98,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.bluetooth.modem_nv_support=true \
     vendor.bluetooth.soc=smd \
     vendor.qcom.bluetooth.soc=smd
+
+# Blurs
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.surface_flinger.supports_background_blur=1 \
+    persist.sys.sf.disable_blurs=1 \
+    ro.sf.blurs_are_expensive=1
 
 # Boot
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -196,6 +207,15 @@ ro.vendor.use_data_netmgrd=true \
 persist.data.netmgrd.qos.enable=true \
 persist.vendor.data.mode=concurrent
 
+# Perf
+PRODUCT_PROPERTY_OVVERIDES += \
+   ro.vendor.extension_library=libqti-perfd-client.so \
+   ro.vendor.qti.sys.fw.bg_apps_limit=60
+
+# Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ct.device.model=XMP-2016030
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_PROVISIONED=1 \
@@ -219,31 +239,9 @@ service.qti.ims.enabled=1 \
 vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
 persist.vendor.qti.telephony.vt_cam_interface=1
 
-# Tcp
-PRODUCT_PROPERTY_OVERRIDES += \
-net.tcp.2g_init_rwnd=10
-
-
 # Recovery
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.recovery_update=false
-
-# Usb
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.sys.usb.config.extra=none
-
-# Wifi
-PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface=wlan0
-
-# Perf
-PRODUCT_PROPERTY_OVVERIDES += \
-   ro.vendor.extension_library=libqti-perfd-client.so \
-   ro.vendor.qti.sys.fw.bg_apps_limit=60
-
-# Properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ct.device.model=XMP-2016030
 
 # SurfaceFlinger sensor props
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -262,35 +260,28 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.earlyGl.sf.duration=13500000 \
     debug.sf.earlyGl.app.duration=21000000
 
-# Wifi
+# Tcp
 PRODUCT_PROPERTY_OVERRIDES += \
-wifi.interface=wlan0
+net.tcp.2g_init_rwnd=10
 
-# Force wifi interface for wlan0
-wifi.interface=wlan0
+# Usb
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.sys.usb.config.extra=none
 
-# property to enable user to access Google WFD settings.
+# WFD settings ( to enable user to access Google)
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.debug.wfd.enable=1
 
-#Blur
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.sf.blurs_are_expensive=1 \
-    ro.surface_flinger.supports_background_blur=1
+# Wifi
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=wlan0
 
-# Adreno
-PRODUCT_PRODUCT_PROPERTIES += \
-ro.hardware.vulkan=adreno \
-ro.hardware.egl=adreno
+# Wifi
+PRODUCT_PROPERTY_OVERRIDES += \
+wifi.interface=wlan0
 
 # ZRAM
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.mark_idle_delay_mins=60 \
     ro.zram.first_wb_delay_mins=180 \
     ro.zram.periodic_wb_delay_hours=24
-
-# Blurs
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.surface_flinger.supports_background_blur=1 \
-    persist.sys.sf.disable_blurs=1 \
-    ro.sf.blurs_are_expensive=1

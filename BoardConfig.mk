@@ -5,13 +5,7 @@
 #
 
 DEVICE_PATH := device/10or/E
-
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8937
-TARGET_NO_BOOTLOADER := true
-
-# Platform
-TARGET_BOARD_PLATFORM := msm8937
+TARGET_USES_64_BIT_BINDER := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -27,8 +21,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
-
-TARGET_USES_64_BIT_BINDER := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -89,12 +81,16 @@ BLUETOOTH_HCI_USE_MCT := true
 QCOM_BT_USE_SMD_TTY := true
 QCOM_BT_USE_BTNV := true
 
+# Boot animation
+TARGET_BOOTANIMATION_HALF_RES := true
+
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := MSM8937
+TARGET_NO_BOOTLOADER := true
+
 # Build
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
-
-# Boot animation
-TARGET_BOOTANIMATION_HALF_RES := true
 
 # Camera
 TARGET_SUPPORT_HAL1 := false
@@ -104,9 +100,6 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_TS_MAKEUP := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /vendor/bin/mm-qcamera-daemon=23
-
-# UI
-TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS :=  0x2000
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
@@ -154,9 +147,6 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_E
 TARGET_RECOVERY_DEVICE_MODULES := libinit_E
 
-# Libshim
-TARGET_LD_SHIM_LIBS := /vendor/bin/mm-qcamera-daemon|vendor/lib/libshims_camera.so
-
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000 androidboot.usbconfigfs=true
@@ -171,6 +161,9 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_VERSION := 4.9
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/10or/E
+
+# Libshim
+TARGET_LD_SHIM_LIBS := /vendor/bin/mm-qcamera-daemon|vendor/lib/libshims_camera.so
 
 # Malloc
 MALLOC_SVELTE_FOR_LIBC32 := true
@@ -199,18 +192,24 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 
+# Platform
+TARGET_BOARD_PLATFORM := msm8937
+
+# Properties
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
+
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
 
-# Properties
-TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-
 # RIL
 DISABLE_RILD_OEM_HOOK := true
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2019-02-01
 
 # SELinux
 SELINUX_IGNORE_NEVERALLOWS := true
@@ -223,6 +222,9 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 BOARD_VNDK_VERSION := current
 BOARD_VNDK_RUNTIME_DISABLE := true
+
+# UI
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS :=  0x2000
 
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
@@ -239,9 +241,5 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
-# Security patch level
-VENDOR_SECURITY_PATCH := 2019-02-01
-
 # Inherit the common proprietary files
 -include vendor/10or/E/BoardConfigVendor.mk
-
