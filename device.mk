@@ -81,34 +81,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths_wcd9335.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_wcd9335.xml \
     $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
-
-# Binder
-PRODUCT_PACKAGES += \
-    libhwbinder \
-    libhwbinder.vendor
-
-# Camera
-PRODUCT_PACKAGES += \
-    camera.msm8937 \
-    libmm-qcamera \
-    libdng_sdk.vendor \
-    Snap
-
-PRODUCT_PACKAGES += \
-    android.hardware.camera.common@1.0 \
-    android.hardware.camera.device@3.3 \
-    android.hardware.camera.device@3.4 \
-    android.hardware.camera.device@3.5 \
-    android.hardware.camera.provider@2.4 \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service \
-    android.hardware.camera.provider@2.5 \
-    android.hardware.camera.provider@2.6 \
-    vendor.qti.hardware.camera.device@1.0
-
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
@@ -129,14 +101,42 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.camera.provider24.disable_mem_init=1
 
-# CNE
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
+
+# Binder
 PRODUCT_PACKAGES += \
-    libcnefeatureconfig
+    libhwbinder \
+    libhwbinder.vendor
+
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8937 \
+    libmm-qcamera \
+    libdng_sdk.vendor \
+    GoogleCameraGo
+
+PRODUCT_PACKAGES += \
+    android.hardware.camera.common@1.0 \
+    android.hardware.camera.device@3.3 \
+    android.hardware.camera.device@3.4 \
+    android.hardware.camera.device@3.5 \
+    android.hardware.camera.provider@2.4 \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service \
+    android.hardware.camera.provider@2.5 \
+    android.hardware.camera.provider@2.6 \
+    vendor.qti.hardware.camera.device@1.0
 
 # Consumerir HIDL
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
+
+# CNE
+PRODUCT_PACKAGES += \
+    libcnefeatureconfig
 
 # Display
 PRODUCT_PACKAGES += \
@@ -164,6 +164,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.3-service.clearkey
+
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service
 
 # FM
 PRODUCT_PACKAGES += \
@@ -309,7 +313,7 @@ PRODUCT_PACKAGES += \
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-aosp
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -459,14 +463,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep
-
-# Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.E
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
