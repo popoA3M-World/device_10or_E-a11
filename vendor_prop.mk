@@ -147,7 +147,7 @@ drm.service.enabled=true
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
     ro.vendor.display.cabl=2 \
-    ro.sf.lcd_density=320 \
+    ro.sf.lcd_density=400 \
     qemu.hw.mainkeys=0 \
     vendor.display.enable_default_color_mode=1
 
@@ -275,10 +275,6 @@ persist.debug.wfd.enable=1
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
-
-# Wifi
-PRODUCT_PROPERTY_OVERRIDES += \
-wifi.interface=wlan0
 
 # ZRAM
 PRODUCT_PROPERTY_OVERRIDES += \
