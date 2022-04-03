@@ -153,7 +153,7 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_msm8937
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8937
-TARGET_LIBINIT_MSM8937_DEFINES_FILE := $(DEVICE_PATH)/libinit/init_land.cpp
+TARGET_LIBINIT_MSM8937_DEFINES_FILE := $(DEVICE_PATH)/libinit/init_E.cpp
 
 # Libshim
 TARGET_LD_SHIM_LIBS := /vendor/bin/mm-qcamera-daemon|vendor/lib/libshims_camera.so
