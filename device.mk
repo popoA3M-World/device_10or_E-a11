@@ -470,10 +470,6 @@ PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep
 
-# Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.E
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
