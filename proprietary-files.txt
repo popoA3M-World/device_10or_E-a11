@@ -137,7 +137,6 @@ vendor/lib/libmmcamera_tuning_lookup.so
 vendor/lib/libmmcamera_ubifocus_lib.so
 vendor/lib/libmmcamera_vpu_module.so
 vendor/lib/libmmjpeg.so
-vendor/lib/libmmosal_proprietary.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
 vendor/lib/libmorpho_easy_hdr.so
@@ -146,7 +145,6 @@ vendor/lib/libmorpho_image_stab4.so
 vendor/lib/libmorpho_panorama_gp.so
 vendor/lib/libois_lc898122.so
 vendor/lib/liboptizoom.so
-vendor/lib/libpdmapper.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libqomx_jpegenc_pipe.so
@@ -165,9 +163,7 @@ vendor/lib64/libmmcamera_cac3_lib.so
 vendor/lib64/libmmcamera_dbg.so
 vendor/lib64/libmmcamera_tintless_algo.so
 vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
-vendor/lib64/libmmosal_proprietary.so
 vendor/lib64/liboptizoom.so
-vendor/lib64/libpdmapper.so
 vendor/lib64/libseemore.so
 vendor/lib64/libubifocus.so
 
